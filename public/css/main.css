@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --primary-color:rgb(91, 160, 186);
+    --secundary-color: rgb(184, 219, 245);
+    --primary-color-darker: rgb(7, 63, 100);
+}
+
+body {
+    background-color: #eee;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+}
+
+header, footer {
+    background-color: ghostwhite;
+    padding: 20 px;
+    text-align: center;
+}
+
+.resultado {
+    align-items: center;
+}
+
+.cabecalhoPrograma {
+    font-size: 18px;
+}
+
+.descricaoPrograma {
+    font-size: 9px;
+}
+
+.nomePrograma {
+    font-size: 12px;
+}
+
+.horarioInicioPrograma {
+    font-size: xx-small;
+}
+
+.horarioFimPrograma {
+    font-size: xx-small;
+}
+
+.thHoraInicio {
+    font-size: xx-small;
+}
+
+.thHoraFim {
+    font-size: xx-small;
+
+}
+/* .aoVivoPrograma {
+    color:red;
+} */
+
+th,tr,td {
+	border: 0;
+	border-top: 1px solid #006497;
+}

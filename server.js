@@ -14,7 +14,10 @@ app.set('view engine', 'ejs')
 app.use(expressLayouts)
 app.set('layout', './layouts/default')
 
-app.use(router)
+// STATICOS
+app.use(express.static('public'))
+app.use('/css', express.static(__dirname + 'public/css'))
 
+app.use(router)
 
 app.listen(port, () => console.info(`Rodando na porta:${port} -- Acesse http://34.201.36.236:3333/`))
