@@ -2,16 +2,17 @@ const express = require('express')
 const router = express.Router()
 const {getDadosApi} = require('./src/controller/apiController')
 
+const dataParametro = new Date().toLocaleDateString()
+
+const [dia,mes,ano] = dataParametro.split('/')
 
 router.get('/', async (req, res) =>{
 
     let dataAbreviada = Math.floor(new Date().getTime() / 1000)
 
-    const dataParametro = new Date().toLocaleDateString()
+    
 
-    const [dia,mes,ano] = dataParametro.split('/')
-
-    const diaParametro = String(`${ano}-${mes}-${dia}`)
+    let diaParametro = `${ano}-${mes}-${dia}`
 
     const dataFront = new Date().toLocaleString('pt-br', { hour12: false, timeZone: 'UTC',dateStyle: 'short'})
 
