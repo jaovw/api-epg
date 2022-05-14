@@ -29,7 +29,7 @@ router.get('/', async (req, res) =>{
         }
     }
     
-    res.render('index',{ api:resultadosGetDados,  programacaoAtuall, title: 'EPG', dataHeader: dataFront})
+    res.render('index',{ api:resultadosGetDados,  programacaoAtual, title: 'EPG', dataHeader: dataFront})
 })
 
 
