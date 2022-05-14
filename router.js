@@ -11,7 +11,7 @@ router.get('/', async (req, res) =>{
 
     const [dia,mes,ano] = dataParametro.split('/')
 
-    const diaParametro = `${ano}-${mes}-${dia}`
+    const diaParametro = String(`${ano}-${mes}-${dia}`)
 
     const dataFront = new Date().toLocaleString('pt-br', { hour12: false, timeZone: 'UTC',dateStyle: 'short'})
 
