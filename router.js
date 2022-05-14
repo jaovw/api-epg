@@ -16,7 +16,7 @@ router.get('/', async (req, res) =>{
 
     const dataFront = new Date().toLocaleString('pt-br', { hour12: false, timeZone: 'UTC',dateStyle: 'short'})
 
-    const resultadosGetDados = await getDadosApi(diaParametro)
+    const resultadosGetDados = await getDadosApi()
 
     let programacaoAtual = []
     for(dado of resultadosGetDados){ 
