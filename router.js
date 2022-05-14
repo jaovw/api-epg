@@ -18,7 +18,7 @@ router.get('/', async (req, res) =>{
     const resultadosGetDados = await getDadosApi('2022-05-14')
 
     let programacaoAtual = []
-    for(dado of resultadosGetDados.programme.entries){ 
+    for(dado of resultadosGetDados){ 
 
         if(dado.end_time > dataAbreviada && dado.start_time <= dataAbreviada){
 
