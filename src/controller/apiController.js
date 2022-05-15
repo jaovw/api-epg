@@ -7,9 +7,8 @@ async function getDadosApi() {
 
     let diaParametro = `${ano}-${mes}-${dia}`
 
-    const resultado = await axios(`https://epg-api.video.globo.com/programmes/1337?date=${ano}-${mes}-${dia}`).catch(e => console.log(e))
+    const resultado = await axios('https://epg-api.video.globo.com/programmes/1337?date=2022-05-15').catch(e => console.log(e))
 
-    console.log(`https://epg-api.video.globo.com/programmes/1337?date=${ano}-${mes}-${dia}`)
     return resultado.data.programme.entries
 }
 
