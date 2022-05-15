@@ -1,13 +1,15 @@
 const axios = require('axios')
 
 async function getDadosApi() {
-    const dataParametro = new Date().toLocaleDateString()
+    let dataParametro = new Date().toLocaleDateString()
 
-    const [dia,mes,ano] = dataParametro.split('/')
+    let [dia,mes,ano] = dataParametro.split('/')
 
-    const diaParametro = `${ano}-${mes}-${dia}`
+    let diaParametro = `${ano}-${mes}-${dia}`
 
-    const resultado = await axios('https://epg-api.video.globo.com/programmes/1337?date='+diaParametro).catch(e => console.log(e))
+    const resultado = await axios(`https://epg-api.video.globo.com/programmes/1337?date=${ano}-${mes}-${dia}`).catch(e => console.log(e))
+
+    console.log(`https://epg-api.video.globo.com/programmes/1337?date=${ano}-${mes}-${dia}`)
     return resultado.data.programme.entries
 }
 
